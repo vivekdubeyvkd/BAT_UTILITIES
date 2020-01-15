@@ -1,0 +1,2 @@
+[HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Servicing]
+“RepairContentServerSource”=DWORD(2)

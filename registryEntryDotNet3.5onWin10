@@ -1,2 +1,2 @@
 [HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Servicing]
-“RepairContentServerSource”=DWORD(2)
+“RepairContentServerSource”=DWORD(2) { hexdecimal 2 }

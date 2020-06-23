@@ -1,5 +1,5 @@
 DLL_NAME=test
-DLL_PATH=C:\Users\scm\Desktop
+DLL_PATH=C:\Users\vivek\Desktop
 NETFX_TOOL="C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7 Tools"
 ILASM_TOOL_PATH=C:\Windows\Microsoft.NET\Framework\v2.0.50727
 SNK_KEY=%DLL_PATH%\mykey.snk

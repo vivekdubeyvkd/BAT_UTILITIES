@@ -5,7 +5,7 @@ REM ============================================================================
 
 REM define below env variables
 set POWERSHELL_SCRIPT=%CD%\import_pfx_cert.ps1
-set PFX_CERT_DIR=<root dir>\mycert.pfx
+set PFX_CERT_DIR="<root dir>\mycert.pfx"
 set PFX_CERT_PASSWORD=mycertpassword
 
 REM creating import cert powershell script

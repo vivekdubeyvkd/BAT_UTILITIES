@@ -1,6 +1,8 @@
 REM ==================================================================================================
 REM import signing PFX cert on any machine
 REM this script creates powershell script on the fly and uses powershell commands to import PFX on a machine
+REM Author: Vivek Dubey
+REM Org: Intuit, Inc @ 2021
 REM ==================================================================================================
 
 REM define below env variables

@@ -2,10 +2,10 @@
 $modifiedFileThreshholdInHour=24
 
 # define parent folder 
-$fileParentPath="Y:\LiveChannelsX64"
+$fileParentPath="C:\Program Files"
 
 # find files recursively to list the updated files within defined threshold under parent folder 
-Get-ChildItem -Path $fileParentPath -Recurse -File | Foreach {
+Get-ChildItem -Path "$fileParentPath" -Recurse -File | Foreach {
     $lastUpdateFileTime=$_.LastWriteTime
     $nowTime = get-date
     if (($nowTime - $lastUpdateFileTime).totalhours -le $modifiedFileThreshholdInHour)

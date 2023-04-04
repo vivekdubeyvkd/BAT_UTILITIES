@@ -10,7 +10,7 @@ Get-ChildItem -Path $fileParentPath -Recurse -File | Foreach {
     $nowTime = get-date
     if (($nowTime - $lastUpdateFileTime).totalhours -le $modifiedFileThreshholdInHour)
     {
-		    $inputFilePath=Join-Path $_.Directory  $_.Name
+	$inputFilePath=Join-Path $_.Directory  $_.Name
         # print file changed timestamp, file name and absolute file path 
         Write-Host $_.LastWriteTime, $_.Name, $inputFilePath
     }

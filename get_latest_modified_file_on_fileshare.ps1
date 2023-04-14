@@ -17,6 +17,18 @@ Get-ChildItem -Path "$fileParentPath" -Recurse -File | Foreach {
     }
 }
 
+# below code finds the directories with recent creation/update operations and might help to understand modified folders in case of manual copy paste of files to share
+Get-ChildItem -Path "$fileParentPath" | Foreach {
+    $lastUpdateFolderTime=$_.LastWriteTime
+    $nowTime = get-date
+    if (($nowTime - $lastUpdateFolderTime).totalhours -le $modifiedFileThreshholdInHour)
+    {
+    	$inputFolderPath=$fileParentPath + "\" + $_.Name
+        # print directory changed timestamp, directory name and absolute directory path 
+        Write-Host $_.LastWriteTime, $_.Name, $inputFolderPath
+    }
+}
+
 ## to find files updated last few minutes
 # define threshold in minutes to find files modified or updated in parent folder 
 $modifiedFileThreshholdInMinute=1440
@@ -35,3 +47,18 @@ Get-ChildItem -Path "$fileParentPath" -Recurse -File | Foreach {
         Write-Host $_.LastWriteTime, $_.Name, $inputFilePath
     }
 }
+
+# below code finds the directories with recent creation/update operations and might help to understand modified folders in case of manual copy paste of files to share
+Get-ChildItem -Path "$fileParentPath" | Foreach {
+    $lastUpdateFolderTime=$_.LastWriteTime
+    $nowTime = get-date
+    if (($nowTime - $lastUpdateFolderTime).totalminutes -le $modifiedFileThreshholdInMinute)
+    {
+    	$inputFolderPath=$fileParentPath + "\" + $_.Name
+        # print directory changed timestamp, directory name and absolute directory path 
+        Write-Host $_.LastWriteTime, $_.Name, $inputFolderPath
+    }
+}
+
+
+
